@@ -1,0 +1,305 @@
+
+# CHAPTER THREE
+
+## LIFE CYCLE DESIGN OF THE PROPOSED SYSTEM
+
+### 3.1 INTRODUCTION
+
+According to Berg, a methodology is the systematic and theoretical
+analysis of the methods applied to a field of study (Berg, 2009). From
+the definition, we can define methodology as the process involved in
+undertaking research. The methodology ensures that the research design
+is appropriate for the study. To develop the proposed system, we will
+use the Rapid Application Development method. The research team selected
+this method because it involves software users in all stages of
+application development and it is iterative (we can repeat a stage until
+we satisfy requirements).
+
+### 3.2 CRYSTALLIZATION OF THE PROBLEM
+
+The study being conducted is because of the following problems. One
+problem is that because of the COVID-19 pandemic, UPSA cannot conduct
+in-person lectures for all students at once. Hence the school has
+implemented 6 weeks virtual and 6 weeks in-person lecture plans for
+students. The problems with the virtual lecture are; most students
+cannot access lectures because they cannot install the Zoom app on their
+devices, Zoom does not record class attendance hence students do not
+attend class, Zoom consuming too much data bandwidth for online
+sessions.
+
+The proposed system attempts to solve the aforementioned issues by
+developing an online lecture platform that is accessible, user-friendly,
+reliable, and efficient.
+
+### 3.3 ANALYSIS AND DESIGN OF THE SYSTEM
+
+#### 3.3.1 System Requirement
+
+System requirements are the arrangement that a system should have for a
+hardware or software application to run easily and proficiently.
+Inability to meet these prerequisites can bring about issues like
+performance issues.
+
+#### 3.3.2 Functional Requirement
+
+Functional requirements of a system are the requirements that specify
+what the system should do when it meets certain conditions. A functional
+requirement is a description of the envisioned functions of a system and
+its components. For example, a functional requirement for the proposed
+system is it emails the host whenever he/she schedules a meeting
+successfully.
+
+The list below is some types of functional requirements. They are:
+
+-   Interoperability--Checks whether the proposed system can work across
+    different browsers
+
+-   Security--Checks the security aspects of the proposed system. For
+    example, the system must ensure encrypted data before transferring
+    it from client to server.
+
+-   Accuracy--Check whether inputs and outputs are correct. For example,
+    the proposed system checks if the email provided is valid before it
+    sends messages to it.
+
+-   Compliance--Checks whether the system conforms with accepted
+    standards. For example, the system complies with data protection
+    standards hence it stores user data on secured database systems.
+
+#### 3.3.3 Non-Functional Requirement
+
+Non-functional requirements of a system are the requirements that
+describe how the system performs certain functions. The non-functional
+requirements are the quality attributes of a system. For example, a
+non-functional requirement for the proposed system is the website should
+not take over 3 seconds to load if the number of concurrent users is \<
+500.
+
+The list below is some types of non-functional requirements. They are:
+
+-   Usability--Focus on whether the website is easy to navigate and the
+    design of the user interface is well-structured.
+
+-   Performance--Measures how efficient the system is in performing its
+    functions. For example, the broadcast must take less than 3 seconds
+    to load for viewers to watch.
+
+-   Accessibility--Checks whether the system is accessible by all
+    people, regardless of disability type or severity of impairment.
+
+-   Scalability--Focus on whether the system can handle needs as it
+    grows.
+
+-   Reliability--Ensures the website is dependable under certain
+    conditions.
+
+-   Maintainability--Focus on ensuring the system keeps functioning by
+    applying updates and auditing the system.
+
+#### 3.3.4 Hardware Requirement
+
+The hardware required to use the proposed system are:
+
+-   A laptop or desktop with a minimum of 2GB of memory, 10GB of storage
+    space, and 1.20GHz of processor speed.
+
+-   A mobile phone or tablet with a minimum of 2GB of memory, 2GB of
+    storage space, and 1.20GHz of processor speed.
+
+-   A web camera
+
+-   A microphone
+
+    5.  #### Software Requirement
+
+The software required to use the proposed system is a modern web browser
+that has JavaScript enabled. Google Chrome is the recommended browser.
+Example; Firefox, Chrome, Safari, Microsoft Edge, and Opera Mini
+
+### 3.4 FLOW CHART DIAGRAM
+
+A flowchart is a diagram that describes a system, computer algorithm, or
+process.
+
+![](media/image5.png){width="6.268055555555556in"
+height="4.353472222222222in"}
+
+***Figure 3.1: Flowchart diagram for a host***
+
+![](media/image6.png){width="6.625in" height="8.453472222222222in"}
+
+***Figure 3.2: Flowchart diagram for student***
+
+#### 3.4.1 Context Diagram
+
+A context diagram is a high-level view of a system that defines the
+boundary between the system and its environment, by showing the entities
+that interact with the system.
+
+![](media/image7.png){width="6.489583333333333in"
+height="4.845833333333333in"}
+
+***Figure 3.3: Context diagram illustrating boundaries between
+entities***
+
+#### 3.4.2 Entity-Relationship Diagram
+
+An entity-relationship diagram is a diagram that shows the relationship
+of entity sets stored in a database.
+
+![](media/image8.png){width="6.447916666666667in"
+height="3.526284995625547in"}
+
+***Figure 3.4: Entity-Relationship Diagram for the proposed system***
+
+#### 3.4.3 Data Flow Diagram
+
+A data flow diagram illustrates how data flows through a system.
+
+![](media/image9.png){width="6.015908792650919in" height="3.96875in"}
+
+***Figure 3.5: Data Flow Diagram for the proposed system***
+
+#### 3.4.4 Use Case Diagram
+
+A use case diagram is a graphical representation of a user\'s actions
+with a system.
+
+![](media/image10.png){width="6.438194444444444in" height="7.46875in"}
+
+***Figure 3.6: Diagram represents how system actors interact with the
+system***
+
+### 3.5 TOOLS USED
+
+The system comprises the front-end and back-end. The front-end is the
+part of the system users can view, access, and interact with. The
+back-end is the part of the system that users cannot access but performs
+the behind-the-scenes activities needed for a system to accomplish its
+purpose.
+
+The research team selected and used the tools stated below because they
+help develop systems quickly, a large community of developers supports
+the improvement of these tools, and frequent system checks and updates
+to fix security or bug issues. The team categorised the tools into two
+(4) groups and they are:
+
+[BACK-END TOOLS]{.underline}
+
+-   Python--The team used the Python programming language for developing
+    the server-side logic of the system. Python is an interpreted,
+    object-oriented, high-level programming language with dynamic
+    semantics. Its high-level built-in data structures, combined with
+    dynamic typing and dynamic binding, make it very attractive for
+    Rapid Application Development, as well as for use as a scripting or
+    glue language to connect existing components. Guido van Rossum
+    created Python and the Python Software Foundation maintains Python.
+
+-   MongoDB--The database used by the research team for storing data is
+    MongoDB. MongoDB is a source-available cross-platform
+    document-oriented database program. Classified as a NoSQL database
+    program, MongoDB stores data in JSON-like documents. MongoDB Inc.
+    developed MongoDB and licensed it under the Server-Side Public
+    License. The team selected MongoDB because it can store and
+    manipulate large amounts of data, provides high scalability, and
+    enables good productivity in application development.
+
+-   Flask Framework--Flask is a micro web framework written in Python.
+    The developer community classified it as a micro framework because
+    it does not require particular tools or libraries. However, Flask
+    supports extensions that can add application features. Armin
+    Ronacher created Flask. The team used the Flask framework because it
+    provides well-written documentation and it gives developers more
+    freedom and control.
+
+-   Ant Media Server--The team used the Ant Media Server as the
+    streaming engine because it is scalable, built with modern streaming
+    protocols and techniques, and has a well-documented developer API.
+    Ant Media Server is a streaming engine software that provides
+    adaptive, ultra-low latency streaming by using WebRTC technology
+    with \~0.5 seconds latency. It can enable streaming any type of live
+    or on-demand video to any device including mobiles, computers or
+    IPTV boxes. It supports RTMP, MP4, HLS, RTSP and WebRTC.
+
+-   Google Cloud Platform (GCP)--Google Cloud Platform offered by
+    Google, is a suite of cloud computing services that runs on the same
+    infrastructure that Google uses internally for its end-user
+    products, such as Google Search, Gmail, and YouTube. Combined with a
+    set of management tools, it provides a series of modular cloud
+    services including computing, data storage, data analytics and
+    machine learning. Google Cloud Platform provides infrastructure as a
+    service, platform as a service, and serverless computing
+    environments. The team selected the Compute Engine service to run a
+    server instance for hosting the proposed system. The team used the
+    GCP because it can easily scale, you can make provision for cloud
+    resources whenever needed automatically, it is cost-effective, and
+    you pay for what you use.
+
+[FRONT-END TOOLS]{.underline}
+
+-   HyperText Markup Language (HTML)--The team used HTML as the markup
+    language for the web pages of the system. HTML is the standard
+    markup language for documents designed to be displayed in a web
+    browser. Invented by Tim Berners-Lee.
+
+-   Cascading Style Sheets (CSS)--CSS is a language for specifying how
+    browsers present documents to users --- how we style it, layout,
+    etc. A document is usually a text file structured using a markup
+    language --- HTML is the most common markup language, but you can
+    use it with other markup languages such as SVG or XML. Developed by
+    World Wide Web Consortium (W3C).
+
+-   JavaScript--JavaScript is a high-level, often just-in-time compiled
+    programming language that conforms to the ECMAScript specification
+    and is used to make web pages interactive. The team used JavaScript
+    because it supports asynchronous programming, and has modern APIs
+    like the Media Capture API used for capturing video and screen
+    sharing.
+
+-   Bootstrap Framework--The team used Bootstrap because it improves
+    system development productivity, and makes system design responsive
+    to different devices. Bootstrap is a free and open-source CSS
+    framework directed at responsive, mobile-first front-end web
+    development. It contains CSS- and JavaScript-based design templates
+    for typography, forms, buttons, navigation, and other interface
+    components. Developed by the Bootstrap Core Team and licensed under
+    the MIT License.
+
+[INTEGRATED DEVELOPMENT ENVIRONMENT (IDE)]{.underline}
+
+-   PyCharm - PyCharm is an IDE by JetBrains for computer programming in
+    Python. It provides code analysis, a graphical debugger, an
+    integrated unit tester, integration with version control systems,
+    and supports web development.
+
+[VERSION CONTROL SYSTEM]{.underline}
+
+-   Git--Git is a free and open-source distributed version control
+    system designed to handle everything from small to very large
+    projects with speed and efficiency. Git tracks the changes you make
+    to files, so you have a record of what you have done, and you can
+    revert to specific versions should you ever need to. Git also makes
+    collaboration easier, allowing changes by multiple people to a
+    project which the team can merge into one source. Linus Torvalds
+    developed Git and Junio Hamano is a major maintainer of Git. The
+    team used Git to manage the different development versions of the
+    system until it built the ultimate system.
+
+-   GitHub--GitHub is a cloud-based Git repository hosting service
+    provided by GitHub Incorporation. It provides access control and
+    several collaboration features such as bug tracking, feature
+    requests, task management, continuous integration and wikis for
+    every project. The team used GitHub to store source codes of the
+    system remotely. This helped the team to access the source codes
+    anywhere and collaborate.
+
+### 3.6 CONCLUSION
+
+The chapter discusses in detail the problems that need a solution and
+the methodology used by the research team which is the Rapid Application
+Development method for system development. The team discusses system
+requirements, functional requirements, non-functional requirements, and
+tools used for the system. Also, the chapter discusses the various
+diagrams like use case diagrams, flowchart diagrams, etc that describes
+what the system should do and how it should perform certain functions.
+

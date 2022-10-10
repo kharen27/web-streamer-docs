@@ -1,0 +1,61 @@
+site_name: Web-Streamer Docs
+site_author: Ackom Karen
+site_description: MkDocs website for my web-streamer final year project at UPSA.
+copyright: "&copy; 2021 UPSA. All rights reserved."
+nav:
+  - Home: index.md
+  - Chapters:
+    - Chapter 1: chapter_1.md
+    - Chapter 2: chapter_2.md
+  #   - Chapter 3: chapter_3.md
+  #   - Chapter 4: chapter_4.md
+  #   - Chapter 5: chapter_5.md
+  - References: references.md
+  # - Appendix: appendix.md
+extra_css:
+  - css/custom.css
+theme:
+  name: material
+  # logo: img/full-logo.svg
+  # favicon: img/logo.png
+  font:
+    text: Nunito Sans
+    code: Fira Mono
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: 'yellow'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-night
+        name: Switch to Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: 'yellow'
+      accent: 'indigo'
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to Light Mode
+markdown_extensions:
+  - meta
+  - toc:
+      title: Table of Contents
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - def_list
+plugins:
+  - search

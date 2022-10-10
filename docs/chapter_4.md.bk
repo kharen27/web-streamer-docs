@@ -1,0 +1,330 @@
+# CHAPTER FOUR
+
+## SYSTEM TESTING, IMPLEMENTATION AND DOCUMENTATION
+
+### 4.1 INTRODUCTION
+
+In software development, the SDLC at each crucial stage produces a
+deliverable. A deliverable is a written document, a software artefact, a
+system test plan or a system implementation plan. This feature of the
+SDLC is crucial to the successful management of a system.
+
+The research team in this chapter will discuss the following plans for
+the proposed system. The plans are:
+
+-   System Testing--testing conducted on a complete integrated system to
+    evaluate the system\'s compliance with its specified requirements
+    (Wikipedia, n.d.).
+
+-   System Implementation--ensuring that the information system is
+    operational (Tutorialspoint, n.d.).
+
+-   Documentation--detailed information, in either written or
+    computerised form, about a system, including its requirements,
+    design, limitation, operation, capabilities, and maintenance.
+
+### 4.2 TESTING OF THE NEW SYSTEM
+
+System testing attempts to detect faults both within the
+\"inter-systems\" and also within the entire system. The software team
+performs system testing on the entire system to measure either system
+requirement specification (SRS) or functional requirement specifications
+(FRS), or both. Also, they plan to test up to and past the limits
+defined in the hardware or software requirements specifications.
+
+The research team started the various testing on the proposed system to
+ensure its functionality and implementation.
+
+#### 4.2.1 Unit Testing
+
+Unit testing is an initial stage product testing technique where the
+team tests small units or components of the products individually
+(Ankit, 2021). This means software teams perform unit testing to
+validate the quality of the code, code coverage, execution and
+maintenance of coding standards, confirmation of the practicality
+covered by the part of code.
+
+The research team performed unit testing by writing test cases to test
+automatically, sections of the source code to ensure it meets its design
+and behaves as intended. The team tested the web pages to ensure
+performance and accessibility. With the feedback given by unit testing,
+the team makes corrections to ensure the unit tested functions as
+intended.
+
+#### 4.2.2 Functional Testing
+
+Functional testing is a quality assurance process and a type of
+black-box testing that bases its test cases on the specifications of the
+software component under test (Wikipedia, 2021). In functional testing,
+quality assurance personnel determine if a system or component is acting
+under predetermined requirements. It uses black-box testing procedures,
+in which the tester does not know of the internal system logic.
+
+The team performed functional testing by applying these steps:
+
+-   The team identified functions we projected the system to perform
+
+-   The team created input data based on the identified functions
+    specifications
+
+-   The team determined output based on the identified functions
+    specifications
+
+-   The team implemented the test cases
+
+-   The team compared the projected outputs with the actual outputs to
+    ensure the system works as per the customer requirement.
+
+#### 4.2.3 Usability Testing
+
+Usability testing, a non-functional testing technique that checks how
+users can use the system. It can determine the design intuitiveness of
+the system tested with users who have no prior exposure to the system.
+Usability testing such as navigating a website gives input on how actual
+users use the system.
+
+The research team performed a usability test to ensure the system is
+easy to use, is user friendly, and is efficient. The team performed the
+following examples of usability testing metrics:
+
+-   The percentage of the users that could complete a task.
+
+-   The average time it takes for users to complete a task.
+
+-   The percentage of users who experienced errors in the system.
+
+-   The average number of screens, clicks, or steps it takes for users
+    to complete a task.
+
+-   The proportion of users who faced a specific error in the system.
+
+-   The mean score users gave to questions about the system\'s ease of
+    use, user-friendliness, and efficiency.
+
+#### 4.2.4 Acceptance Testing
+
+Acceptance testing evaluates a product, prototype, or software
+application to make sure it is up to specifications and quality before
+putting into production (Hayes, 2020). The key role of this test is to
+assess the system\'s consistency with the business necessities and
+confirm on the off chance that it has met the rules for delivery to
+users.
+
+Types of acceptance testing include:
+
+-   User acceptance testing
+
+-   Business acceptance testing
+
+-   Alpha and Beta testing
+
+#### 4.2.5 Visual (live) Testing
+
+Visual testing process of comparing user interface of an app or website
+against a user interface design blueprint. The major role of visual
+testing is to ensure the system user interface is having all the visual
+specifications provided by the client as a part of the functional or
+non-functional requirements. Software teams use a visual testing tool
+like [Applitools](https://applitools.com/) to aid them in performing the
+visual test.
+
+### 4.3 IMPLEMENTATION OF THE NEW SYSTEM
+
+Systems implementation is the delivery of a system into production. It
+is making the system go live for users to use it. A software team can
+implement a system using any of the following approaches.
+
+#### 4.3.1 Parallel Implementation
+
+In the parallel implementation, the team executes the new system with
+the old system still running. This approach can compare output from both
+systems and there is less risk in data loss but data entry will be
+time-consuming.
+
+#### 4.3.2 Phased Implementation
+
+In a phased implementation, small parts of the new system gradually
+replace small parts of the old system. This approach has a minimal
+impact on the organisation if a failure occurs but executing the entire
+new system takes more time.
+
+#### 4.3.3 Pilot Implementation
+
+In a pilot implementation, a small group of users within an organisation
+uses the new system before the entire organisation implements it. This
+approach helps in identifying and addressing system failures without a
+widespread impact on the organisation but has issues with scaling to
+meet user demands.
+
+#### 4.3.4 Direct Implementation
+
+In the direct implementation, the team retires the old system and
+implements the new system. This approach is suitable for non-critical
+systems but it is not suitable for a system that has uncertainties.
+
+The research team applied the pilot implementation approach because it
+is suitable for implementing systems that have uncertainties such as
+issues with scalability. Also, the team executes the system in a
+realistic setting and can learn about whether it satisfies the
+specifications. The team can also identify and address failures before
+the entire organisation uses the system.
+
+### 4.4 SYSTEM DOCUMENTATION
+
+#### 4.4.1 About the System
+
+The proposed system known as iStream is a web-based lecturing platform
+designed to facilitate online lectures between teachers and students of
+UPSA. The system allows users with unstable internet access, low-end
+computer or mobile devices, and less data bandwidth to take part in
+online lectures. The system has the following features:
+
+-   Built with modern web and streaming technologies that enhance
+    performance, functionality, usability, accessibility, reliability,
+    and less data consumption.
+
+-   Teachers can schedule and host lecture meetings.
+
+-   Students can join lecture meetings.
+
+-   A chat room for teachers and students to interact during a meeting.
+
+-   Teachers can print attendance reports to check students who joined
+    the meeting.
+
+-   A user-friendly and well-designed user interface to ensure system
+    ease of use.
+
+-   A documentation page to train the user on how to use the system.
+
+-   A contact page for users to get in touch with the system support
+    team.
+
+#### 4.4.2 User Access Level
+
+The user access level is the rights or permissions assigned to the user
+of a system.
+
+The teachers and students of UPSA are the projected users of the
+proposed system. The access rights given to teachers and students are:
+
+[Teachers]{.underline}
+
+-   can schedule an unlimited number of meetings
+
+-   can host a meeting at a time
+
+-   can print meeting attendance reports if they have access
+
+-   can only interact in meetings they take part in
+
+-   can schedule a meeting with a minimum duration of 1 hour and maximum
+    duration of 3 hours
+
+[Students]{.underline}
+
+-   can join a meeting once
+
+-   can join multiple meetings
+
+-   can only interact in meetings they take part in
+
+#### 4.4.3 Getting Started
+
+The entire procedure of using the proposed system will involve:
+
+[Teacher]{.underline}
+
+-   Schedule Meeting
+
+```{=html}
+<!-- -->
+```
+-   Connect computer or mobile device to an internet connection.
+
+-   Open a web browser and enter the web address of the online lecturing
+    platform.
+
+-   Navigate to the scheduling meeting section.
+
+-   Fill and submit the form for scheduling meetings.
+
+-   Copy and share meeting details with students.
+
+```{=html}
+<!-- -->
+```
+-   Host Meeting
+
+```{=html}
+<!-- -->
+```
+-   Connect computer or mobile device to an internet connection.
+
+-   Open a web browser and enter the web address of the online lecturing
+    platform.
+
+-   Navigate to the host meeting page by clicking on the host meeting
+    link.
+
+-   Login to the studio page by entering the meeting one-time password.
+
+-   Grant permission for the website to access the camera and
+    microphone.
+
+-   Perform the settings.
+
+-   Click on the Go Live button to broadcast.
+
+-   Send chat messages or questions through the chat room.
+
+-   Click on the End Broadcast button to end broadcasting when finished
+    lecturing.
+
+-   Click on the Leave button to exit the studio page.
+
+-   View and print attendance reports.
+
+```{=html}
+<!-- -->
+```
+-   Get Attendance Report
+
+```{=html}
+<!-- -->
+```
+-   Connect computer or mobile device to an internet connection.
+
+-   Open a web browser and enter the web address of the online lecturing
+    platform.
+
+-   Navigate to the attendance page by clicking on the get attendance
+    link.
+
+-   Fill in the attendance form and submit it.
+
+-   Download the attendance report by clicking on the link provided.
+
+[Student]{.underline}
+
+-   Connect computer or mobile device to an internet connection.
+
+-   Open web browser
+
+    -   Enter the web address of the online lecturing platform or
+
+        -   Navigate to the join meeting page by clicking on the join
+            meeting link.
+
+        -   Enter meeting id and username to access the viewer page
+
+    -   Enter the invitation link received from the teacher
+
+        -   Enter a username to access the viewer page
+
+-   View broadcast.
+
+-   Send chat messages or questions through the chat room.
+
+-   Click on the Leave button to exit the viewer page.
+

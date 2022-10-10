@@ -1,0 +1,618 @@
+
+# APPENDIX
+
+## APPENDIX A (Programming Codes)
+
+**[Contact Page codes]{.underline}**
+
+**Backend**
+
+[Python]{.underline}
+
+\# Route for contact us
+
+\@application.route(\'/contact_us\', methods=\[\"GET\", \"POST\"\])
+
+def contact():
+
+if request.method == \"POST\":
+
+u_name = request.form.get(\"c_name\")
+
+u_email = request.form.get(\"c_email\")
+
+u_subject = request.form.get(\"c_subj\")
+
+u_msg = request.form.get(\"c_msg\")
+
+result = validate_email(u_email)
+
+if None in \[u_name, u_subject, u_msg, result\]:
+
+flash(message=\"Message not sent. Please check your input and
+resubmit\", category=\"danger\")
+
+return redirect(url_for(\"contact\"))
+
+email_data = dict(user=u_name, topic=u_subject, email=u_email,
+message=u_msg)
+
+contact_us_task.apply_async(args=\[email_data\], countdown=60)
+
+flash(message=\"Message sent\", category=\"success\")
+
+return redirect(url_for(\"contact\")), 301
+
+return render_template(\'contact.html\')
+
+**Frontend**
+
+[HTML 5]{.underline}
+
+\<!DOCTYPE html\>
+
+\<html lang=\"en\"\>
+
+\<head\>
+
+\<meta charset=\"UTF-8\"\>
+
+\<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"\>
+
+\<meta name=\"viewport\" content=\"width=device-width,
+initial-scale=1.0\"\>
+
+\<link rel=\"stylesheet\" href=\"{{ url_for(\'static\',
+filename=\'contact.css\') }}\"\>
+
+\<link rel=\"stylesheet\" href=\"{{ url_for(\'static\',
+filename=\'icomoon.css\') }}\"\>
+
+\<link rel=\"stylesheet\" href=\"{{ url_for(\'static\',
+filename=\'css/bootstrap.min.css\') }}\"\>
+
+\<title\>Contact Us \| iSTREAM\</title\>
+
+\<style\>
+
+\@import
+url(\'https://fonts.googleapis.com/css2?family=Satisfy&display=swap\');
+
+\</style\>
+
+\</head\>
+
+\<body\>
+
+\<div class=\"main\"\>
+
+\<nav class=\"navbar navbar-expand-lg app-nav\"\>
+
+\<div class=\"container\"\>
+
+\<h2\>\<b\>\<a class=\"navbar-brand\" href=\"#\"
+
+style=\"font-family: \'Satisfy\', cursive; letter-spacing: 3px;
+text-decoration: none; color: #fff; font-size:
+24pt;\"\>iSTREAM\</a\>\</b\>\</h2\>
+
+\<button class=\"navbar-toggler\" type=\"button\"
+data-bs-toggle=\"collapse\"
+
+data-bs-target=\"#navbarSupportedContent\"
+aria-controls=\"navbarSupportedContent\"
+
+aria-expanded=\"false\" aria-label=\"Toggle navigation\"\>
+
+\<span class=\"icon-menu\"\>\</span\>
+
+\</button\>
+
+\<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\"
+style=\"flex-grow: 0;\"\>
+
+\<ul class=\"navbar-nav nav-menu mr-auto mb-2 mb-lg-0\"\>
+
+\<li class=\"nav-item\"\>
+
+\<a class=\"nav-link active\" aria-current=\"page\"
+href=\"/\"\>Welcome\</a\>
+
+\</li\>
+
+\<li class=\"nav-item\"\>
+
+\<a class=\"nav-link\" href=\"/join_meeting/v/host_verify\"\>Host
+Class\</a\>
+
+\</li\>
+
+\<li class=\"nav-item\"\>
+
+\<a class=\"nav-link\" href=\"/join_meeting/v/user_verify\"\>Join
+Class\</a\>
+
+\</li\>
+
+\<li class=\"nav-item\"\>
+
+\<a class=\"nav-link\"
+href=\"/search_attendance_report\"\>Attendance\</a\>
+
+\</li\>
+
+\<li class=\"nav-item\"\>
+
+\<a class=\"nav-link\" href=\"/contact_us\"\>Contact Us\</a\>
+
+\</li\>
+
+\</ul\>
+
+\</div\>
+
+\</div\>
+
+\</nav\>
+
+\<div class=\"p-3 verify_box\"\>
+
+\<div class=\"mb-3\"\>
+
+\<h3 class=\"main-title text-center\"\>Contact Form\</h3\>
+
+\</div\>
+
+\<div\>
+
+{% include \'includes/\_message.html\' %}
+
+\<form action=\"\" method=\"POST\" class=\"mt-2\"\>
+
+\<div\>
+
+\<div class=\"mb-2\"\>
+
+\<label for=\"inputName\" class=\"form-label\"\>Name\</label\>
+
+\<input type=\"text\" name=\"c_name\" autocomplete=\"off\"
+class=\"form-control\" id=\"inputName\"
+
+minlength=\"2\" maxlength=\"50\" placeholder=\"e.g. Karen Doe\"
+required\>
+
+\</div\>
+
+\<div class=\"mb-2\"\>
+
+\<label for=\"inputEmail\" class=\"form-label\"\>Email\</label\>
+
+\<div class=\"input-group\"\>
+
+\<input type=\"email\" name=\"c_email\" autocomplete=\"off\"
+class=\"form-control\" inputmode=\"email\"
+
+id=\"inputEmail\"
+pattern=\"\^(\[\\w\\d\\-\\.\]+?)@(\[a-z\]+?).(com\|org\|net\|edu)(.\[a-zA-Z\]{2})??\$\"
+
+maxlength=\"400\" placeholder=\"e.g. example@domain.com\"
+aria-describedby=\"inputValidate\" required\>
+
+\<span class=\"validate input-group-text border-start-0\"
+id=\"inputValidate\"
+
+style=\"background-color: transparent; margin-left: 0px; padding-left:
+5px; padding-right: 24px;\"\>\</span\>
+
+\</div\>
+
+\</div\>
+
+\<div class=\"mb-2\"\>
+
+\<label for=\"inputSubject\" class=\"form-label\"\>Subject\</label\>
+
+\<input type=\"text\" name=\"c_subj\" autocomplete=\"off\"
+class=\"form-control\" id=\"inputSubject\"
+
+minlength=\"5\" maxlength=\"100\" placeholder=\"e.g. How to Join Class\"
+required\>
+
+\</div\>
+
+\<div class=\"mb-2\"\>
+
+\<label for=\"inputMessage\" class=\"form-label\"\>Message\</label\>
+
+\<textarea name=\"c_msg\" id=\"inputMessage\" class=\"form-control\"
+rows=\"3\" minlength=\"10\" maxlength=\"300\"
+
+placeholder=\"Write message here\" required\>\</textarea\>
+
+\</div\>
+
+\</div\>
+
+\<div class=\"text-center\"\>
+
+\<button type=\"submit\" class=\"btn btn-stream\"\>Submit\</button\>
+
+\</div\>
+
+\</form\>
+
+\</div\>
+
+\</div\>
+
+\</div\>
+
+\<script src=\"{{ url_for(\'static\', filename=\'js/bootstrap.min.js\')
+}}\"\>\</script\>
+
+\<script src=\"{{ url_for(\'static\', filename=\'js/sub_functions.js\')
+}}\"\>\</script\>
+
+\</body\>
+
+\</html\>
+
+[CSS 3]{.underline}
+
+\@import
+url(\'https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap\');
+
+\@import url(\'/static/subfunctions.css\');
+
+:root {
+
+\--primary-color: #000033;
+
+\--secondary-color: #f18900;
+
+}
+
+html,
+
+body {
+
+height: 100vh;
+
+overflow: hidden;
+
+background-color: #000033c9 !important;
+
+}
+
+\* {
+
+box-sizing: border-box;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+body {
+
+font-family: \'Karla\', sans-serif !important;
+
+}
+
+.app-nav{
+
+background-color: transparent;
+
+color: #fff;
+
+padding: 20px 0 !important;
+
+}
+
+.nav-menu{
+
+text-align: right;
+
+font-weight: bold;
+
+}
+
+.nav-link{
+
+color: #fff !important;
+
+font-size: 13pt;
+
+}
+
+.main-title{
+
+font-weight: bolder;
+
+}
+
+.text-bold{
+
+font-weight: bold;
+
+}
+
+.btn-stream{
+
+background-color: transparent !important;
+
+color: #fff !important;
+
+font-size: 12pt !important;
+
+font-weight: bolder !important;
+
+border: 2px solid var(\--secondary-color) !important;
+
+}
+
+input, textarea{
+
+background-color: transparent !important;
+
+color: #fff !important;
+
+border: 1px solid var(\--secondary-color) !important;
+
+}
+
+input\[type=\"text\"\], textarea, .info-success,
+
+.info-normal, .info-danger, .input-group{
+
+width: 75% !important;
+
+margin: 0 auto !important;
+
+font-weight: bold !important;
+
+}
+
+input:focus, textarea:focus{
+
+background-color: var(\--primary-color) !important;
+
+color: #fff !important;
+
+border: 1px solid #fff !important;
+
+font-weight: bold;
+
+}
+
+input::placeholder, textarea::placeholder{
+
+color: #ffffffc4 !important;
+
+}
+
+label{
+
+font-weight: bold;
+
+text-align: left!important;
+
+margin-left: 85px;
+
+}
+
+.dropdown-menu{
+
+background-color: #000033ab !important;
+
+border: 1px solid #fff!important;
+
+}
+
+.dropdown-item{
+
+color: #fff !important;
+
+font-weight:500;
+
+}
+
+.dropdown-item:hover{
+
+color: #fff !important;
+
+background-color:transparent !important;
+
+font-weight:500;
+
+}
+
+.dropdown-divider{
+
+color:#fff !important;
+
+}
+
+span.validate{
+
+color: #fff !important;
+
+margin-left: 85px;
+
+border: 1px solid var(\--secondary-color);
+
+}
+
+span.icon-menu{
+
+color: #fff !important;
+
+font-size: 16pt;
+
+}
+
+button.navbar-toggler{
+
+border: 1px solid var(\--secondary-color);
+
+}
+
+button.navbar-toggler:focus{
+
+border: 1px solid #fff;
+
+box-shadow: none;
+
+}
+
+#inputEmail:invalid + span::after{
+
+position: absolute;
+
+content: \'×\';
+
+color: #fff !important;
+
+font-size: 20pt;
+
+font-weight: bolder;
+
+}
+
+#inputEmail:valid + span:after{
+
+position: absolute;
+
+content: \'✓\';
+
+color: #fff !important;
+
+font-size: 18pt;
+
+font-weight: bolder;
+
+}
+
+.verify_box{
+
+color: #fff;
+
+width: 50%;
+
+margin: 0 auto;
+
+border-radius: 30px;
+
+}
+
+\@media (max-width:1024px){
+
+.verify_box{
+
+color: #fff;
+
+width: 95%;
+
+margin: 0 auto;
+
+border-radius: 30px;
+
+}
+
+input\[type=\"text\"\], textarea, .info-success,
+
+.info-normal, .info-danger, .input-group{
+
+width: 90% !important;
+
+margin: 0 auto !important;
+
+font-weight: normal!important;
+
+}
+
+label{
+
+font-weight: bold;
+
+text-align: left!important;
+
+margin-left: 25px;
+
+}
+
+span.validate{
+
+margin-left: 25px;
+
+}}
+
+## APPENDIX B (User Interfaces of the Application)
+
+![](media/image11.png){width="6.768055555555556in"
+height="3.8854166666666665in"}
+
+Interface for Home Page
+
+![](media/image12.png){width="6.768055555555556in"
+height="3.4791666666666665in"}
+
+Interface for Home Page after scheduling class
+
+![](media/image13.png){width="6.479166666666667in" height="4.25in"}
+
+The interface of Class Details emailed to Host
+
+![](media/image14.png){width="6.59375in" height="3.6145833333333335in"}
+
+Interface for Host Class Page
+
+![](media/image15.png){width="6.768055555555556in"
+height="4.260416666666667in"}
+
+Interface for Join Class
+
+![](media/image16.png){width="6.768055555555556in"
+height="3.7395833333333335in"}
+
+Interface for Attendance Page
+
+![](media/image17.png){width="6.768055555555556in"
+height="3.8958333333333335in"}
+
+Interface for Contact Us Page
+
+![](media/image18.png){width="6.768055555555556in" height="3.84375in"}
+
+Interface for Page Not Found (Error 404)
+
+![](media/image19.png){width="6.768055555555556in" height="3.84375in"}
+
+Interface for Studio Page requesting access to camera and microphone
+
+![](media/image20.png){width="6.768055555555556in"
+height="3.8074759405074365in"}
+
+Interface for Studio Page with an explanation about each component
+
+![](media/image21.png){width="6.768055555555556in"
+height="4.072916666666667in"}
+
+Interface for Studio Page with the host using chat room and class
+details shown
+
+![](media/image22.png){width="6.768055555555556in" height="4.03125in"}
+
+Interface for Attendance Report Page
+
+![](media/image23.png){width="6.768055555555556in"
+height="3.8074759405074365in"}
+
+Interface for Viewer Page with an explanation about each component
+
+![](media/image24.png){width="6.768055555555556in"
+height="2.8874573490813646in"}
+
+Mobile interface for Viewer Page with an explanation about each
+component

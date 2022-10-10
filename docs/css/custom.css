@@ -1,0 +1,39 @@
+img.float-left {
+    margin: 0 0.5rem 0.5rem 0;
+    float: left;
+}
+
+img.float-right {
+    margin: 0 0 0.5rem 0.5rem;
+    float: right;
+}
+
+img.left_align {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+img.right_align {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+img.center_align {
+    display: block;
+    margin: auto;
+}
+
+.text_align_left{
+    text-align: left;
+}
+
+.text_align_right{
+    text-align: right;
+}
+
+.text_align_center{
+    text-align: center;
+}
+.underline_text{
+    text-decoration: underline;
+}
