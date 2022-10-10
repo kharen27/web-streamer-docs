@@ -42,8 +42,7 @@ BY
 <p markdown class="text_align_center">
 
 THIS PROJECT REPORT IS SUBMITTED TO THE DEPARTMENT OF INFORMATION
-TECHNOLOGY STUDIES OF THE FACULTY OF\
-INFORMATION TECHNOLOGY AND COMMUNICATION STUDIES OF THE UNIVERSITY OF
+TECHNOLOGY STUDIES OF THE FACULTY OF INFORMATION TECHNOLOGY AND COMMUNICATION STUDIES OF THE UNIVERSITY OF
 PROFESSIONAL STUDIES, ACCRA IN PARTIAL FULFILLMENT FOR A BACHELOR OF
 SCIENCE DEGREE IN INFORMATION TECHNOLOGY MANAGEMENT
 
@@ -57,7 +56,7 @@ presented for another Degree in any University. We are convinced that
 this project was not copied from any other person. All sources of
 information have however been acknowledged with due respect.
 
-ACKOM KAREN 10090428 31st JULY, 2021\
+ACKOM KAREN 10090428 31st JULY, 2021 <br>
 DUODU RANDY 10087872 31st JULY, 2021
 
 ## SUPERVISOR'S DECLARATION
@@ -66,7 +65,7 @@ I declare that the preparation and the presentation of this Dissertation
 were under the guidelines on supervision of the Dissertation laid down
 by the University of Professional Studies, Accra (UPSA).
 
-DR. BEN OCRA\
+DR. BEN OCRA <br>
 Date: 31st JULY, 2021
 
 ## DEDICATION
