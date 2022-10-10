@@ -1,7 +1,8 @@
 site_name: Web-Streamer Docs
 site_author: Ackom Karen
+site_url: https://web-streamer-docs.readthedocs.io/en/latest/
 site_description: MkDocs website for my web-streamer final year project at UPSA.
-copyright: "&copy; 2021 UPSA. All rights reserved."
+copyright: "&copy; 2021 Ackom Karen."
 nav:
   - Home: index.md
   - Chapters:
@@ -16,8 +17,6 @@ extra_css:
   - css/custom.css
 theme:
   name: material
-  # logo: img/full-logo.svg
-  # favicon: img/logo.png
   font:
     text: Nunito Sans
     code: Fira Mono
